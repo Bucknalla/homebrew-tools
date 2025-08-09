@@ -5,13 +5,13 @@
 class GoGpsSimulator < Formula
   desc "GPS NMEA0183 Simulator - Command-line tool for simulating GPS receiver output"
   homepage "https://github.com/Bucknalla/go-gps-simulator"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Bucknalla/go-gps-simulator/releases/download/v0.0.2/go-gps-simulator_Darwin_x86_64.tar.gz"
-      sha256 "c0c4f82e9d24f41af10bace4c28518979aeae3f0d5534451848c3f9e2b7f90b9"
+      url "https://github.com/Bucknalla/go-gps-simulator/releases/download/v0.0.3/go-gps-simulator_Darwin_x86_64.tar.gz"
+      sha256 "ebf64cc7f55e7269470b69699fdcf6f4a4a24ce97089877ace507d7604656d50"
 
       def install
         bin.install "gps-simulator"
@@ -19,8 +19,8 @@ class GoGpsSimulator < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Bucknalla/go-gps-simulator/releases/download/v0.0.2/go-gps-simulator_Darwin_arm64.tar.gz"
-      sha256 "8a0822815d973b1615cf163dc24d56eeac17f83c2ba0d754bb4afaf5ad7f10b1"
+      url "https://github.com/Bucknalla/go-gps-simulator/releases/download/v0.0.3/go-gps-simulator_Darwin_arm64.tar.gz"
+      sha256 "5d5ef9f2b28a6d1a2ed38fd82f3b78ab7cadb12bdeb217bbd652f6e6557f945a"
 
       def install
         bin.install "gps-simulator"
@@ -31,24 +31,24 @@ class GoGpsSimulator < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/Bucknalla/go-gps-simulator/releases/download/v0.0.2/go-gps-simulator_Linux_x86_64.tar.gz"
-      sha256 "cd6f3e3bd2aa70a7c3aca82d9171db34851d5c3b9711e9db1c155bcb5bfd73f5"
+      url "https://github.com/Bucknalla/go-gps-simulator/releases/download/v0.0.3/go-gps-simulator_Linux_x86_64.tar.gz"
+      sha256 "414d4049282232bb71988ab32b69a9cba97f6b19214d0d56e7082fe61b27cb7d"
       def install
         bin.install "gps-simulator"
         pkgshare.install "scripts"
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/Bucknalla/go-gps-simulator/releases/download/v0.0.2/go-gps-simulator_Linux_armv6.tar.gz"
-      sha256 "90e8c82098b1038e1390cb1bbf5bb6e234e6783a07c808219f29fe4c2da23b57"
+      url "https://github.com/Bucknalla/go-gps-simulator/releases/download/v0.0.3/go-gps-simulator_Linux_armv6.tar.gz"
+      sha256 "b4889823f8d3c93d39564d306bb2054141d35bccba269d8573de3e7f34a599d5"
       def install
         bin.install "gps-simulator"
         pkgshare.install "scripts"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/Bucknalla/go-gps-simulator/releases/download/v0.0.2/go-gps-simulator_Linux_arm64.tar.gz"
-      sha256 "ea16b919c9a8119d1becd4a8d338748e9cd325a197bb5592364bc8a72708d6c7"
+      url "https://github.com/Bucknalla/go-gps-simulator/releases/download/v0.0.3/go-gps-simulator_Linux_arm64.tar.gz"
+      sha256 "23a9be16311fcce732938c975e640d5a9ebbdb3a9b1d8ea0b8892302512608a9"
       def install
         bin.install "gps-simulator"
         pkgshare.install "scripts"
